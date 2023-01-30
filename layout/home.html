@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            green: {
+              300: '#204321',
+              200: '#006508',
+              100: '#00f403',
+            },
+          }
+        }
+      }
+    }
+  </script>
+  <title>Home</title>
+</head>
+<body class="overflow-x-hidden">
+  <div class="w-screen h-screen bg-[url('../imgs/bg.png')]">
+    <nav class="w-[80%] h-16 mx-auto flex justify-end">
+      <button class="ml-auto text-3xl text-white z-20" id="hamburger-button">&#9776;</button>
+        <div class="absolute w-screen h-screen bg-black left-[-100vw] z-10 border-l-2 border-l-green-100" id="menu" style="transition: all ease-in-out 0.3s">
+          <ul class="text-white font-bold text-center text-xl mt-32">
+            <li class="mb-8 cursor-pointer">Home</li>
+            <li class="mb-8 cursor-pointer">About Us</li>
+            <li class="mb-8 cursor-pointer">Latest News</li>
+            <li class="mb-8 cursor-pointer">Contact Us</li>
+          </ul>
+        </div>
+    </nav>
+    <nav class="w-full h-[70px] flex fixed bottom-0 bg-black z-50">
+      <div class="w-[80%] flex justify-center mx-auto">
+        <ul class="text-white font-bold flex flex-row space-x-6 items-center justify-center">
+          <li class="hover:text-green-100 cursor-pointer" style="transition: all ease-in-out 0.3s">Lore</li>
+          <li class="hover:text-green-100 cursor-pointer" style="transition: all ease-in-out 0.3s">Schedule</li>
+          <li class="hover:text-green-100 cursor-pointer" style="transition: all ease-in-out 0.3s"><img src="../imgs/logo.png" class="object-cover w-16 h-16"></li>
+          <li class="hover:text-green-100 cursor-pointer" style="transition: all ease-in-out 0.3s">News</li>
+          <li class="hover:text-green-100 cursor-pointer" style="transition: all ease-in-out 0.3s">Teams</li>
+        </ul>
+      </div>
+    </nav>
+    <section class="flex justify-center items-center text-white w-screen" style="height: calc(100vh - (70px + 4rem))">
+      <div class="flex flex-col items-center">
+        <h1 class="font-bold text-5xl">CTA Goes Here</h1>
+        <button class="button mt-8 w-128 h-12 font-bold px-8 text-2xl">Contact Us</button>
+        <button class="button mt-8 w-128 h-12 font-bold px-8 text-2xl">Join Us</button>
+      </div>
+    </section>
+  </div>
+
+  <section class="w-screen h-[40vh] bg-[url('../imgs/bg.png')]">
+    <h1 class="font-bold text-4xl text-white text-center pt-6">Who Are We?</h1>
+    <p class="text-white p-8 text-center text-xl leading-8
+    lg:w-[55vw] mx-auto">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit nostrum excepturi placeat, neque non est asperiores consectetur maiores facilis laudantium ut eius temporibus voluptates aliquam eos similique dicta necessitatibus eaque.</p>
+  </section>
+
+  <section class="flex flex-col w-screen h-96 
+  bg-[url('../imgs/bg.png')]">
+  <h1 class="font-bold text-4xl text-white text-center pt-6">Latest News</h1>
+  
+  <div class="flex items-center justify-center w-screen h-96 
+  relative">
+    <div class="w-72 h-40 bg-black absolute news-slide group" style="transition: all ease-in-out 0.3s;">
+      <div class="relative">
+        <img src="../imgs/bg&logo.png">
+        <div class="absolute inset-0 w-full h-full bg-[url('../imgs/bg.png')] bg-cover opacity-0 transition-all group-hover:opacity-100"> 
+        
+        </div>
+      </div>
+    </div>
+
+    <div class="w-72 h-40 bg-black absolute news-slide group" style="transition: all ease-in-out 0.3s;">
+      <div class="relative">
+        <img src="../imgs/bg.png">
+        <div class="absolute inset-0 w-full h-full bg-[url('../imgs/bg.png')] bg-cover opacity-0 transition-all group-hover:opacity-100">
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="w-72 h-40 bg-black absolute news-slide group" style="transition: all ease-in-out 0.3s;">
+      <div class="relative">
+        <img src="../imgs/bg(darker).png">
+        <div class="absolute inset-0 w-full h-full bg-[url('../imgs/bg.png')] bg-cover opacity-0 transition-all group-hover:opacity-100">
+          
+        </div>
+      </div>
+    </div>
+
+    <button class="absolute w-[40px] h-[40px] rounded-full bg-black text-green-100 text-3xl top-[45%] right-[30px] active:scale-90 btn-next">&gt;</button>
+    <button class="absolute w-[40px] h-[40px] rounded-full bg-black text-green-100 text-3xl top-[45%] left-[20px] active:scale-90 btn-prev">&lt;</button>
+  </div>
+  </section>
+
+  <section class="flex flex-col items-center w-screen min-h-16 bg-[url('../imgs/bg.png')]">
+  <h1 class="font-bold text-4xl text-white text-center pt-6">Our Streamers</h1>
+    
+    <div class="w-72 h-40 bg-black my-4 mt-8 group" style="transition: all ease-in-out 0.3s;">
+      <div class="relative">
+        <img src="../imgs/bg.png">
+        <div class="absolute inset-0 w-full h-full bg-[url('../imgs/bg.png')] bg-cover opacity-0 transition-all group-hover:opacity-100">
+          
+        </div>
+      </div>
+    </div>
+    <div class="w-72 h-40 bg-black my-4 group" style="transition: all ease-in-out 0.3s;">
+      <div class="relative">
+        <img src="../imgs/bg.png">
+        <div class="absolute inset-0 w-full h-full bg-[url('../imgs/bg.png')] bg-cover opacity-0 transition-all group-hover:opacity-100">
+          
+        </div>
+      </div>
+    </div>
+    <div class="w-72 h-40 bg-black my-4 group" style="transition: all ease-in-out 0.3s;">
+      <div class="relative">
+        <img src="../imgs/bg.png">
+        <div class="absolute inset-0 w-full h-full bg-[url('../imgs/bg.png')] bg-cover opacity-0 transition-all group-hover:opacity-100">
+          
+        </div>
+      </div>
+    </div>
+    <div class="w-72 h-40 bg-black my-4 group" style="transition: all ease-in-out 0.3s;">
+      <div class="relative">
+        <img src="../imgs/bg.png">
+        <div class="absolute inset-0 w-full h-full bg-[url('../imgs/bg.png')] bg-cover opacity-0 transition-all group-hover:opacity-100">
+          
+        </div>
+      </div>
+    </div>
+    <div class="w-72 h-40 bg-black my-4 group" style="transition: all ease-in-out 0.3s;">
+      <div class="relative">
+        <img src="../imgs/bg.png">
+        <div class="absolute inset-0 w-full h-full bg-[url('../imgs/bg.png')] bg-cover opacity-0 transition-all group-hover:opacity-100">
+          
+        </div>
+      </div>
+    </div>
+    <div class="w-72 h-40 bg-black my-4 mb-24 group" style="transition: all ease-in-out 0.3s;">
+      <div class="relative">
+        <img src="../imgs/bg.png">
+        <div class="absolute inset-0 w-full h-full bg-[url('../imgs/bg.png')] bg-cover opacity-0 transition-all group-hover:opacity-100">
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <!-- 
+      needed info:
+      - match time
+      - match date
+      - opposing team
+      - tournament
+      - match results (after the match is played)
+      - match status (upcoming, live, ended)
+    -->
+  </section>
+
+  <!-- 
+  <section>
+
+  </section> 
+  -->
+  
+
+</body>
+</html>
