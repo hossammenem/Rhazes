@@ -154,8 +154,8 @@
     </div>
   </section>
 
-  <section>
-    <!-- 
+  <section class="min-h-[50vh] w-screen bg-[url('../imgs/bg.png')] flex flex-col justify-center items-center space-y-6">
+    <!--
       needed info:
       - match time
       - match date
@@ -164,14 +164,61 @@
       - match results (after the match is played)
       - match status (upcoming, live, ended)
     -->
+    <div class="w-[80%] h-32 relative">
+      <img src="../imgs/logo.png" class="w-64 h-36 object-cover absolute right-[-20px] bottom-[-15%] z-10">
+      <div class="w-full h-32 border-green-100 border-2 our-team mx-auto">
+        <div class="inner flex items-center justify-start p-2">
+          <h1 class="font-bold text-2xl text-white ml-4">Rhazes E-sports</h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="w-[50%] h-32 bg-black results">
+      <div class="inner-results flex flex-col justify-center items-center space-y-1">
+        <h1 class="font-bold text-3xl text-white">3:0</h1>
+        <h1 class="font-bold text-sm text-white">28 OCTOBER 2022, 06:00 PM</h1>
+        <h1 class="font-bold text-sm text-white">LOL World Cup Final</h1>
+      </div>
+    </div>
+
+    <div class="w-[80%] h-32 relative">
+      <img src="../imgs/T1_logo(4).jpg" class="w-80 h-36 object-cover absolute left-[-80px] bottom-[-15%] z-10">
+    <div class="w-full h-32 border-green-100 border-2 opposing-team">
+      <div class="inner-opposing ml-auto relative flex items-center justify-end p-2">
+          <h1 class="font-bold text-3xl text-white mr-12">T1 Esports</h1>
+      </div>
+    </div>
+  </div>
   </section>
 
-  <!-- 
-  <section>
-
+  <section class="w-screen min-h-[75vh] bg-black flex flex-col items-center space-y-6">
+  <h1 class="font-bold text-4xl text-white text-center pt-6">Contact Us</h1>
+    <div class="w-3/5 h-full space-y-6">
+      <div class="w-full h-16 bg-green-100 input relative">
+        <input type="text" placeholder="Enter Your Name" class="input bg-black w-[99%] h-[97%] absolute left-[1px] top-[1px] text-white p-4 text-lg">
+      </div>
+      <div class="w-full h-16 bg-green-100 input relative">
+        <input type="text" placeholder="Enter Your E-mail" class="input bg-black w-[99%] h-[97%] absolute left-[1px] top-[1px] text-white p-4 text-lg">
+      </div>
+      <div class="w-full h-64 bg-green-100 input relative">
+        <textarea type="text" placeholder="Enter Your Message" class="input bg-black w-[99%] h-[99%] absolute left-[1px] top-[1px] text-white p-4 text-lg"></textarea>
+      </div>
+      <button class="button w-128 h-12 font-bold px-8 text-2xl text-white ">Submit</button>
+    </div>
   </section> 
-  -->
   
+  <footer class="w-screen h-32 bg-gray-800 flex flex-row items-start p-4">
+    <div class="">
+      <ul class="flex flex-row space-x-3 hover:cursor-pointer">
+        <li>Facebook</li>
+        <li>Twitter</li>
+        <li>Youtube</li>
+      </ul>
+    </div>
+    <div class="ml-auto">
+      &#169;Rhazes inc.
+    </div>
+  </footer>
 
 </body>
 </html>
