@@ -18,9 +18,9 @@ const initApp = ()=> {
   const sliderFunction = () => {
     const slides = document.querySelectorAll(".news-slide");
     slides.forEach((slide, indx) => {
-      slide.style.transform = `translateX(${indx * 150}%)`;
+      slide.style.transform = `translateX(${indx * 200}%)`;
     });
-  
+
     let curSlide = 0;
     let maxSlide = slides.length -1;
   
@@ -33,7 +33,7 @@ const initApp = ()=> {
       }
 
       slides.forEach((slide, indx) => {
-        slide.style.transform = `translateX(${150 * (indx - curSlide)}%)`;
+        slide.style.transform = `translateX(${200 * (indx - curSlide)}%)`;
       });
     });
 
@@ -45,21 +45,11 @@ const initApp = ()=> {
         curSlide--;
       }
       slides.forEach((slide, indx) => {
-        slide.style.transform = `translateX(${150 * (indx - curSlide)}%)`;
+        slide.style.transform = `translateX(${200 * (indx - curSlide)}%)`;
       });
     });
   }
-
-  const hideScrollBar = ()=> {
-    // "scrollY: ", window.scrollY,
-    // " scollTop: ", document.body.scrollTop
-    // " scrollHeight: ", document.body.scrollHeight
-    // " clientHeight: ", document.body.clientHeight
-
-  }
-
   sliderFunction()
-  hideScrollBar()
 }
 
 

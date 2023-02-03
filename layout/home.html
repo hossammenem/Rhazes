@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="style.css">
   <script src="app.js" defer></script>
   <script>
@@ -24,20 +25,37 @@
   </script>
   <title>Home</title>
 </head>
-<body class="overflow-x-hidden">
-  <div class="w-screen h-screen bg-[url('../imgs/bg.png')]">
-    <nav class="w-[80%] h-16 mx-auto flex justify-end">
+<body>
+  <div class="w-screen h-screen bg-black">
+    
+    <nav class="w-[80%] h-16 mx-auto flex justify-end border-b-2 border-b-green-100">
+      <div class="switch my-auto">
+        <input id="language-toggle" class="check-toggle check-toggle-round-flat" type="checkbox">
+        <label for="language-toggle"></label>
+        <span class="on">En</span>
+        <span class="off">Ar</span>
+      </div>
+
       <button class="ml-auto text-3xl text-white z-20" id="hamburger-button">&#9776;</button>
         <div class="absolute w-screen h-screen bg-black left-[-100vw] z-10 border-l-2 border-l-green-100" id="menu" style="transition: all ease-in-out 0.3s">
           <ul class="text-white font-bold text-center text-xl mt-32">
             <li class="mb-8 cursor-pointer">Home</li>
             <li class="mb-8 cursor-pointer">About Us</li>
             <li class="mb-8 cursor-pointer">Latest News</li>
+            <li class="mb-8 cursor-pointer">Matches Schedule</li>
+            <li class="mb-8 cursor-pointer">Our Teams</li>
+            <li class="mb-8 cursor-pointer">Lore</li>
             <li class="mb-8 cursor-pointer">Contact Us</li>
+          </ul>
+          <ul class="text-white text-center text-xl space-x-2">
+            <li class="inline cursor-pointer hover:text-[#0f90f3] transition"><i class="fa fa-facebook-square" aria-hidden="true"></i></li>
+            <li class="inline cursor-pointer hover:text-[#f00] transition"><i class="fa fa-youtube-play" aria-hidden="true"></i></li>
+            <li class="inline cursor-pointer hover:text-[#2ab2f6] transition"><i class="fa fa-twitter" aria-hidden="true"></i></li>
           </ul>
         </div>
     </nav>
-    <nav class="w-full h-[70px] flex fixed bottom-0 bg-black z-50">
+
+    <nav class="w-screen h-[70px] fixed bottom-0 bg-black z-50 border-t-2 border-t-green-100 md:hidden">
       <div class="w-[80%] flex justify-center mx-auto">
         <ul class="text-white font-bold flex flex-row space-x-6 items-center justify-center">
           <li class="hover:text-green-100 cursor-pointer" style="transition: all ease-in-out 0.3s">Lore</li>
@@ -48,6 +66,7 @@
         </ul>
       </div>
     </nav>
+
     <section class="flex justify-center items-center text-white w-screen" style="height: calc(100vh - (70px + 4rem))">
       <div class="flex flex-col items-center">
         <h1 class="font-bold text-5xl">CTA Goes Here</h1>
@@ -57,19 +76,20 @@
     </section>
   </div>
 
-  <section class="w-screen h-[40vh] bg-[url('../imgs/bg.png')]">
-    <h1 class="font-bold text-4xl text-white text-center pt-6">Who Are We?</h1>
+  <section class="w-screen min-h-96 bg-black">
+    <h1 class="font-bold text-4xl text-white text-center pt-6 title-underline">Who Are We?</h1>
     <p class="text-white p-8 text-center text-xl leading-8
     lg:w-[55vw] mx-auto">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit nostrum excepturi placeat, neque non est asperiores consectetur maiores facilis laudantium ut eius temporibus voluptates aliquam eos similique dicta necessitatibus eaque.</p>
   </section>
 
-  <section class="flex flex-col w-screen h-96 
-  bg-[url('../imgs/bg.png')]">
-  <h1 class="font-bold text-4xl text-white text-center pt-6">Latest News</h1>
+
+  <section class="flex flex-col max-w-screen h-96 
+  bg-black">
+  <h1 class="font-bold text-4xl text-white text-center pt-6 title-underline">Latest News</h1>
   
-  <div class="flex items-center justify-center w-screen h-96 
-  relative">
-    <div class="w-72 h-40 bg-black absolute news-slide group" style="transition: all ease-in-out 0.3s;">
+  <div class="flex flex-row items-center justify-center gap-2 p-3  w-screen h-96 
+  relative overflow-hidden">
+    <div class="w-72 h-40 bg-black absolute md:relative news-slide  group md:hidden" style="transition: all ease-in-out 0.3s;">
       <div class="relative">
         <img src="../imgs/bg&logo.png">
         <div class="absolute inset-0 w-full h-full bg-[url('../imgs/bg.png')] bg-cover opacity-0 transition-all group-hover:opacity-100"> 
@@ -78,7 +98,33 @@
       </div>
     </div>
 
-    <div class="w-72 h-40 bg-black absolute news-slide group" style="transition: all ease-in-out 0.3s;">
+    <div class="w-72 h-40 bg-black group hidden md:block" style="transition: all ease-in-out 0.3s;">
+      <div class="relative">
+        <img src="../imgs/bg&logo.png">
+        <div class="absolute inset-0 w-full h-full bg-[url('../imgs/bg.png')] bg-cover opacity-0 transition-all group-hover:opacity-100"> 
+        
+        </div>
+      </div>
+    </div>
+
+    <div class="w-72 h-40 bg-black group hidden md:block" style="transition: all ease-in-out 0.3s;">
+      <div class="relative">
+        <img src="../imgs/bg&logo.png">
+        <div class="absolute inset-0 w-full h-full bg-[url('../imgs/bg.png')] bg-cover opacity-0 transition-all group-hover:opacity-100"> 
+        
+        </div>
+      </div>
+    </div>
+    <div class="w-72 h-40 bg-black group hidden md:block" style="transition: all ease-in-out 0.3s;">
+      <div class="relative">
+        <img src="../imgs/bg&logo.png">
+        <div class="absolute inset-0 w-full h-full bg-[url('../imgs/bg.png')] bg-cover opacity-0 transition-all group-hover:opacity-100"> 
+        
+        </div>
+      </div>
+    </div>
+
+    <div class="w-72 h-40 bg-black absolute md:relative news-slide group md:hidden" style="transition: all ease-in-out 0.3s;">
       <div class="relative">
         <img src="../imgs/bg.png">
         <div class="absolute inset-0 w-full h-full bg-[url('../imgs/bg.png')] bg-cover opacity-0 transition-all group-hover:opacity-100">
@@ -87,7 +133,7 @@
       </div>
     </div>
 
-    <div class="w-72 h-40 bg-black absolute news-slide group" style="transition: all ease-in-out 0.3s;">
+    <div class="w-72 h-40 bg-black absolute md:relative news-slide group md:hidden" style="transition: all ease-in-out 0.3s;">
       <div class="relative">
         <img src="../imgs/bg(darker).png">
         <div class="absolute inset-0 w-full h-full bg-[url('../imgs/bg.png')] bg-cover opacity-0 transition-all group-hover:opacity-100">
@@ -96,128 +142,120 @@
       </div>
     </div>
 
-    <button class="absolute w-[40px] h-[40px] rounded-full bg-black text-green-100 text-3xl top-[45%] right-[30px] active:scale-90 btn-next">&gt;</button>
-    <button class="absolute w-[40px] h-[40px] rounded-full bg-black text-green-100 text-3xl top-[45%] left-[20px] active:scale-90 btn-prev">&lt;</button>
+    <button class="absolute w-[40px] h-[40px] text-sm rounded-full bg-black text-green-100 border-2 border-green-100 top-[45%] right-[4%] active:scale-90 btn-next md:hidden"><i class="fa fa-arrow-right"></i></button>
+    <button class="absolute w-[40px] h-[40px] text-sm rounded-full bg-black text-green-100 border-2 border-green-100 top-[45%] left-[4%] active:scale-90 btn-prev md:hidden"><i class="fa fa-arrow-left"></i></button>
   </div>
   </section>
 
-  <section class="flex flex-col items-center w-screen min-h-16 bg-[url('../imgs/bg.png')]">
-  <h1 class="font-bold text-4xl text-white text-center pt-6">Our Streamers</h1>
+  <section class="flex flex-col w-screen min-h-16 bg-black">
+  <h1 class="font-bold text-4xl text-white text-center pt-6 title-underline">Our Streamers</h1>
+    <div class="w-full flex flex-wrap justify-center gap-4 p-4 my-8">
+    <div class="w-72 h-40 bg-black group" style="transition: all ease-in-out 0.3s;">
+      <div class="relative">
+        <img src="../imgs/bg.png">
+        <div class="absolute inset-0 w-full h-full bg-[url('../imgs/bg.png')] bg-cover opacity-0 transition-all group-hover:opacity-100">
+          
+        </div>
+      </div>
+    </div>
+    <div class="w-72 h-40 bg-black group" style="transition: all ease-in-out 0.3s;">
+      <div class="relative">
+        <img src="../imgs/bg.png">
+        <div class="absolute inset-0 w-full h-full bg-[url('../imgs/bg.png')] bg-cover opacity-0 transition-all group-hover:opacity-100">
+          
+        </div>
+      </div>
+    </div>
+    <div class="w-72 h-40 bg-black  group" style="transition: all ease-in-out 0.3s;">
+      <div class="relative">
+        <img src="../imgs/bg.png">
+        <div class="absolute inset-0 w-full h-full bg-[url('../imgs/bg.png')] bg-cover opacity-0 transition-all group-hover:opacity-100">
+          
+        </div>
+      </div>
+    </div>
+    <div class="w-72 h-40 bg-black  group" style="transition: all ease-in-out 0.3s;">
+      <div class="relative">
+        <img src="../imgs/bg.png">
+        <div class="absolute inset-0 w-full h-full bg-[url('../imgs/bg.png')] bg-cover opacity-0 transition-all group-hover:opacity-100">
+          
+        </div>
+      </div>
+    </div>
+    <div class="w-72 h-40 bg-black group" style="transition: all ease-in-out 0.3s;">
+      <div class="relative">
+        <img src="../imgs/bg.png">
+        <div class="absolute inset-0 w-full h-full bg-[url('../imgs/bg.png')] bg-cover opacity-0 transition-all group-hover:opacity-100">
+          
+        </div>
+      </div>
+    </div>
+    <div class="w-72 h-40 bg-black group" style="transition: all ease-in-out 0.3s;">
+      <div class="relative">
+        <img src="../imgs/bg.png">
+        <div class="absolute inset-0 w-full h-full bg-[url('../imgs/bg.png')] bg-cover opacity-0 transition-all group-hover:opacity-100">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+
+  <section class="min-h-[50vh] w-screen bg-black">
+  <h1 class="font-bold text-4xl text-white text-center pt-6 title-underline">Schedule</h1>
+    <div class="flex flex-col lg:flex-row p-6 justify-center items-center gap-6">
+      <div class="w-96 h-32 flex items-center flex-row border-green-100 border-2 p-3">
+        <img src="../imgs/logo.png" class="w-32 h-32 object-cover">
+        <h1 class="font-bold text-xl text-white mx-auto">Rhazes E-sports</h1>
+      </div>
+
+      <div class="w-56 h-32 bg-black results">
+        <div class="inner-results flex flex-col justify-center items-center space-y-1">
+          <h1 class="font-bold text-3xl text-white">3:0</h1>
+          <h1 class="text-sm text-white">28 OCTOBER 2022, 06:00 PM</h1>
+          <h1 class="text-sm text-white">LOL World Cup Final</h1>
+        </div>
+      </div>
+
+    <div class="w-96 h-32 flex items-center flex-row border-green-100 border-2 p-3">
+      <img src="../imgs/T1_logo(4).jpg" class="w-32 h-32 object-cover">
+      <h1 class="font-bold text-2xl text-white text-cen mx-auto">T1 Esports</h1>
+    </div>
     
-    <div class="w-72 h-40 bg-black my-4 mt-8 group" style="transition: all ease-in-out 0.3s;">
-      <div class="relative">
-        <img src="../imgs/bg.png">
-        <div class="absolute inset-0 w-full h-full bg-[url('../imgs/bg.png')] bg-cover opacity-0 transition-all group-hover:opacity-100">
-          
-        </div>
-      </div>
-    </div>
-    <div class="w-72 h-40 bg-black my-4 group" style="transition: all ease-in-out 0.3s;">
-      <div class="relative">
-        <img src="../imgs/bg.png">
-        <div class="absolute inset-0 w-full h-full bg-[url('../imgs/bg.png')] bg-cover opacity-0 transition-all group-hover:opacity-100">
-          
-        </div>
-      </div>
-    </div>
-    <div class="w-72 h-40 bg-black my-4 group" style="transition: all ease-in-out 0.3s;">
-      <div class="relative">
-        <img src="../imgs/bg.png">
-        <div class="absolute inset-0 w-full h-full bg-[url('../imgs/bg.png')] bg-cover opacity-0 transition-all group-hover:opacity-100">
-          
-        </div>
-      </div>
-    </div>
-    <div class="w-72 h-40 bg-black my-4 group" style="transition: all ease-in-out 0.3s;">
-      <div class="relative">
-        <img src="../imgs/bg.png">
-        <div class="absolute inset-0 w-full h-full bg-[url('../imgs/bg.png')] bg-cover opacity-0 transition-all group-hover:opacity-100">
-          
-        </div>
-      </div>
-    </div>
-    <div class="w-72 h-40 bg-black my-4 group" style="transition: all ease-in-out 0.3s;">
-      <div class="relative">
-        <img src="../imgs/bg.png">
-        <div class="absolute inset-0 w-full h-full bg-[url('../imgs/bg.png')] bg-cover opacity-0 transition-all group-hover:opacity-100">
-          
-        </div>
-      </div>
-    </div>
-    <div class="w-72 h-40 bg-black my-4 mb-24 group" style="transition: all ease-in-out 0.3s;">
-      <div class="relative">
-        <img src="../imgs/bg.png">
-        <div class="absolute inset-0 w-full h-full bg-[url('../imgs/bg.png')] bg-cover opacity-0 transition-all group-hover:opacity-100">
-          
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="min-h-[50vh] w-screen bg-[url('../imgs/bg.png')] flex flex-col justify-center items-center space-y-6">
-    <!--
-      needed info:
-      - match time
-      - match date
-      - opposing team
-      - tournament
-      - match results (after the match is played)
-      - match status (upcoming, live, ended)
-    -->
-    <div class="w-[80%] h-32 relative">
-      <img src="../imgs/logo.png" class="w-64 h-36 object-cover absolute right-[-20px] bottom-[-15%] z-10">
-      <div class="w-full h-32 border-green-100 border-2 our-team mx-auto">
-        <div class="inner flex items-center justify-start p-2">
-          <h1 class="font-bold text-2xl text-white ml-4">Rhazes E-sports</h1>
-        </div>
-      </div>
-    </div>
-
-    <div class="w-[50%] h-32 bg-black results">
-      <div class="inner-results flex flex-col justify-center items-center space-y-1">
-        <h1 class="font-bold text-3xl text-white">3:0</h1>
-        <h1 class="font-bold text-sm text-white">28 OCTOBER 2022, 06:00 PM</h1>
-        <h1 class="font-bold text-sm text-white">LOL World Cup Final</h1>
-      </div>
-    </div>
-
-    <div class="w-[80%] h-32 relative">
-      <img src="../imgs/T1_logo(4).jpg" class="w-80 h-36 object-cover absolute left-[-80px] bottom-[-15%] z-10">
-    <div class="w-full h-32 border-green-100 border-2 opposing-team">
-      <div class="inner-opposing ml-auto relative flex items-center justify-end p-2">
-          <h1 class="font-bold text-3xl text-white mr-12">T1 Esports</h1>
-      </div>
-    </div>
   </div>
   </section>
 
-  <section class="w-screen min-h-[75vh] bg-black flex flex-col items-center space-y-6">
-  <h1 class="font-bold text-4xl text-white text-center pt-6">Contact Us</h1>
-    <div class="w-3/5 h-full space-y-6">
-      <div class="w-full h-16 bg-green-100 input relative">
-        <input type="text" placeholder="Enter Your Name" class="input bg-black w-[99%] h-[97%] absolute left-[1px] top-[1px] text-white p-4 text-lg">
-      </div>
-      <div class="w-full h-16 bg-green-100 input relative">
-        <input type="text" placeholder="Enter Your E-mail" class="input bg-black w-[99%] h-[97%] absolute left-[1px] top-[1px] text-white p-4 text-lg">
+  <section class="w-screen min-h-[50vh] bg-black flex flex-col items-center gap-6">
+    <h1 class="font-bold text-4xl text-white text-center pt-6">Contact Us</h1>
+    <div class="w-3/5 h-full space-y-6 pb-6">
+      <div class="w-full gap-6 flex flex-col md:flex-row">
+        <div class="w-full h-16 bg-green-100 input relative">
+          <input type="text" placeholder="Enter Your Name" class="input bg-black w-[99%] h-[97%] absolute left-[1px] top-[1px] text-white p-4 text-lg">
+        </div>
+        <div class="w-full h-16 bg-green-100 input relative">
+          <input type="text" placeholder="Enter Your E-mail" class="input bg-black w-[99%] h-[97%] absolute left-[1px] top-[1px] text-white p-4 text-lg">
+        </div>
       </div>
       <div class="w-full h-64 bg-green-100 input relative">
         <textarea type="text" placeholder="Enter Your Message" class="input bg-black w-[99%] h-[99%] absolute left-[1px] top-[1px] text-white p-4 text-lg"></textarea>
       </div>
-      <button class="button w-128 h-12 font-bold px-8 text-2xl text-white ">Submit</button>
+      <button class="button w-128 h-12 font-bold px-8 text-2xl text-white">Submit</button>
     </div>
   </section> 
   
-  <footer class="w-screen h-32 bg-gray-800 flex flex-row items-start p-4">
-    <div class="">
+  <footer class="w-screen text-white h-16 bg-green-200 mb-[70px] md:mb-0 ">
+    <div class="w-[80%] mx-auto h-full flex flex-row items-center">
       <ul class="flex flex-row space-x-3 hover:cursor-pointer">
-        <li>Facebook</li>
-        <li>Twitter</li>
-        <li>Youtube</li>
+        <li class="inline cursor-pointer hover:text-[#0f90f3] transition"><i class="fa fa-facebook-square" aria-hidden="true"></i></li>
+        <li class="inline cursor-pointer hover:text-[#f00] transition"><i class="fa fa-youtube-play" aria-hidden="true"></i></li>
+        <li class="inline cursor-pointer hover:text-[#2ab2f6] transition"><i class="fa fa-twitter" aria-hidden="true"></i></li>
       </ul>
+
+      <div class="ml-auto">
+        &#169;Rhazes inc.
+      </div>
     </div>
-    <div class="ml-auto">
-      &#169;Rhazes inc.
-    </div>
+
   </footer>
 
 </body>
