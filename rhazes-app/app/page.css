@@ -1,33 +1,6 @@
-body {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  overflow: overlay;
-}
-
-::-webkit-scrollbar {
-  width: 5px;
-  transition: background-color linear .3s;
-}
-
-::-webkit-scrollbar-track {
-  display: none;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #00f403;
-  border-radius: 1rem;
-  transition: background-color linear .3s;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #006508;
-}
-
 .switch {
   position: relative;
   display: inline-block;
-  margin: 1px 1px;
 }
 
 .switch > span {
@@ -49,12 +22,6 @@ input.check-toggle-round-flat:checked ~ .off {
 
 input.check-toggle-round-flat:checked ~ .on {
   color: #fff;
-}
-
-.switch {
-  position: relative;
-  display: inline-block;
-  margin: 0 5px;
 }
 
 .switch > span {
@@ -153,7 +120,12 @@ input.check-toggle-round-flat + label:after {
 }
 
 input.check-toggle-round-flat:checked + label:after {
-  margin-left: 40px;
+  margin-left: 41px;
+}
+
+.position-img {
+  position: absolute;
+  top: -20% !important;
 }
 
 .slide {
@@ -230,7 +202,7 @@ input.check-toggle-round-flat:checked + label:after {
   );
 }
 
-.input {
+.form-input {
   clip-path: polygon(
     0.5em 0%,
     100% 0,
@@ -243,7 +215,7 @@ input.check-toggle-round-flat:checked + label:after {
 
 .title-underline:after {
   content: '';
-  width: 20%;
+  width: 40%;
   display: block;
   margin: 10px auto 0 auto;
   align-self: flex-end;
