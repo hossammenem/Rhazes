@@ -1,20 +1,18 @@
 export default function initApp() {
-  const hamburgerButton: HTMLButtonElement | null = document.querySelector("#hamburger-button") ?? null;
+  const hamburgerButton: HTMLButtonElement | null =
+    document.querySelector("#hamburger-button") ?? null;
   const menu: HTMLElement | null = document.getElementById("menu") ?? null;
 
   const toggleMenu = () => {
     if (hamburgerButton && menu) {
       menu.classList.toggle("slide");
-      if (menu.classList.contains("slide")) {
-        hamburgerButton.innerHTML = "&times;";
-      } else {
-        hamburgerButton.innerHTML = "&#9776;";
-      }
+      hamburgerButton.classList.toggle("toggle-btn");
     }
   };
 
   const sliderFunction = () => {
-    const slides: NodeListOf<HTMLElement> = document.querySelectorAll(".news-slide");
+    const slides: NodeListOf<HTMLElement> =
+      document.querySelectorAll(".news-slide");
     slides.forEach((slide: HTMLElement, indx) => {
       slide.style.transform = `translateX(${indx * 200}%)`;
     });
@@ -22,7 +20,8 @@ export default function initApp() {
     let curSlide = 0;
     let maxSlide = slides.length - 1;
 
-    const nextSlide: HTMLButtonElement | null = document.querySelector(".btn-next") ?? null;
+    const nextSlide: HTMLButtonElement | null =
+      document.querySelector("#btn-next") ?? null;
     if (nextSlide) {
       nextSlide.addEventListener("click", function () {
         if (maxSlide - curSlide === 0) {
@@ -37,7 +36,8 @@ export default function initApp() {
       });
     }
 
-    const prevSlide: HTMLButtonElement | null = document.querySelector(".btn-prev") ?? null;
+    const prevSlide: HTMLButtonElement | null =
+      document.querySelector("#btn-prev") ?? null;
     if (prevSlide) {
       prevSlide.addEventListener("click", function () {
         if (curSlide === 0) {
@@ -54,7 +54,5 @@ export default function initApp() {
   };
 
   sliderFunction();
-  return { hamburgerButton, menu, toggleMenu }
+  return { hamburgerButton, menu, toggleMenu };
 }
-
-document.addEventListener("DOMContentLoaded", initApp);

@@ -16,6 +16,7 @@ module.exports = {
     },
     backgroundImage: {
       bg: "url('../public/imgs/bg.png')",
+      bg2: "url('../public/imgs/streamer_frame_nigger.png')",
     },
     screens: {
       xs: { max: "450px" },

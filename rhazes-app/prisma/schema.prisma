@@ -1,0 +1,25 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Schedule {
+  id           String    @id @default(uuid())
+  recordNumber Int       @default(autoincrement())
+  OppLogo      String
+  OppName      String
+  tournament   String
+  matchType    MatchType
+  date         DateTime
+  matchResults String
+}
+
+enum MatchType {
+  Bo1
+  Bo3
+  Bo5
+}

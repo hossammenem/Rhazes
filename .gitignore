@@ -15,6 +15,7 @@ rhazes-app/yarn-debug.log*
 rhazes-app/yarn-error.log*
 rhazes-app/.pnpm-debug.log*
 rhazes-app/.env*.local
+rhazes-app/.env
 rhazes-app/.vercel
 rhazes-app/*.tsbuildinfo
 rhazes-app/next-env.d.ts
