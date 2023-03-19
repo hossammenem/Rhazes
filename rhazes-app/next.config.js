@@ -8,6 +8,18 @@ const nextConfig = {
     defaultLocale: "ar",
     localeDetection: false,
   },
+  async rewrites() {
+    return [
+      {
+        source: "/:lang(en)/:path*",
+        destination: "/:path*",
+      },
+      {
+        source: "/:lang(ar)/:path*",
+        destination: "/:path*",
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;
