@@ -9,7 +9,7 @@ export default function LangChangeBtn() {
 
   function handleLanguageChange() {
     setChcked(!checked);
-    router.push(`/${lang.lang === "en" ? "ar" : "en"}`);
+    router.push(`/${lang.lang === "en" ? "ar" : "en"}/`);
   }
 
   return (
