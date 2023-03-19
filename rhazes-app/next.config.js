@@ -8,15 +8,11 @@ const nextConfig = {
     defaultLocale: "ar",
     localeDetection: false,
   },
+  trailingSlash: true,
   async rewrites() {
     return [
       {
-        source: "/en",
-        destination: `/`,
-        permanent: true,
-      },
-      {
-        source: "/:lang(ar|en)/:path*",
+        source: "/:lang(en|ar)/:path*",
         destination: "/:path*",
       },
     ];
