@@ -9,7 +9,7 @@ import { FiLogOut } from "react-icons/fi";
 export default function AdminDashboard() {
   return (
     <>
-      <div className="fixed -z-10 h-screen w-screen before:absolute before:inset-0 before:h-full before:w-full before:bg-bg2 before:opacity-[0.35] before:content-['']"></div>
+      <div className="fixed -z-10 h-screen w-screen before:absolute before:inset-0 before:h-full before:w-full before:bg-bg2 before:bg-cover before:bg-no-repeat before:opacity-[0.35] before:content-['']"></div>
       <header className="mx-auto flex w-full max-w-screen-md flex-row items-center p-6">
         <Link href="/" className="flex flex-row items-center gap-2">
           <FaArrowLeft />

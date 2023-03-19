@@ -3,7 +3,7 @@
 
 
 type Mutation {
-  createMatch(OppLogo: String, OppName: String, date: String, matchResults: String, matchType: String, tournament: String): Schedule!
+  createMatchMutation(OppLogo: String, OppName: String, date: String, matchResults: String, matchType: String, tournament: String): Schedule
 }
 
 type Query {

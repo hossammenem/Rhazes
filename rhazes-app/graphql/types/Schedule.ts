@@ -28,7 +28,7 @@ const matchType = enumType({
   members: ["Bo1", "Bo3", "Bo5"],
 });
 
-export const latestMatches = queryField("Schedule", {
+export const latestMatches = queryField("latestMatches", {
   type: list(Schedule),
   resolve: async (root, args, ctx) => {
     return await ctx.prisma.schedule.findMany({
@@ -40,7 +40,7 @@ export const latestMatches = queryField("Schedule", {
   },
 });
 
-export const createMatchMutation = mutationField("Schedule", {
+export const createMatchMutation = mutationField("createMatchMutation", {
   type: Schedule,
   args: {
     OppLogo: stringArg(),

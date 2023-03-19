@@ -5,11 +5,11 @@ import useLang from "../Hooks/useLang";
 export default function LangChangeBtn() {
   const router = useRouter();
   const lang = useLang();
-  const [checked, setChcked] = useState(lang.lang == "Ar" ? true : false);
-  
+  const [checked, setChcked] = useState(lang.lang == "ar" ? true : false);
+
   function handleLanguageChange() {
     setChcked(!checked);
-    router.push(`/${lang.lang == "En" ? "Ar" : "En"}`);
+    router.push(`/${lang.lang === "en" ? "ar" : "en"}`);
   }
 
   return (
@@ -18,9 +18,7 @@ export default function LangChangeBtn() {
         id="language-toggle"
         className="check-toggle check-toggle-round-flat"
         checked={checked}
-        onChange={() => {
-          handleLanguageChange();
-        }}
+        onChange={() => handleLanguageChange()}
         type="checkbox"
       />
       <label htmlFor="language-toggle"></label>

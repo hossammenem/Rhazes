@@ -18,7 +18,7 @@ import Footer from "./components/Footer";
 export default function Home() {
   return (
     <>
-      <div className="fixed -z-10 h-screen w-screen before:absolute before:inset-0 before:h-full before:w-full before:bg-bg2 before:opacity-[0.35] before:content-['']"></div>
+      <div className="fixed -z-10 h-screen w-screen before:absolute before:inset-0 before:h-full before:w-full before:bg-bg2 before:bg-cover before:bg-no-repeat before:opacity-[0.35] before:content-['']"></div>
       <div className="h-screen w-screen">
         <nav className="relative mx-auto flex h-16 w-4/5 border-b-2 border-b-green-100">
           <LgNavbar />

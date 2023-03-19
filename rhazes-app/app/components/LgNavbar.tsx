@@ -7,14 +7,16 @@ export default function LgNavbar() {
   return (
     <>
       <div className="relative hidden lg:block">
-        <Image
-          width={200}
-          height={130}
-          className="position-img"
-          layout="fixed"
-          src={"/imgs/logo.png"}
-          alt={"rhazes logo"}
-        />
+        <a href="/">
+          <Image
+            width={200}
+            height={130}
+            className="position-img"
+            layout="fixed"
+            src={"/imgs/logo.png"}
+            alt={"rhazes logo"}
+          />
+        </a>
       </div>
       <div className="relative hidden h-full w-full lg:block">
         <ul
