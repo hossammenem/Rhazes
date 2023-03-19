@@ -1,6 +1,6 @@
 export default {
   // navbar
-  lang: "En",
+  lang: "en",
   home: "Home",
   aboutUs: "About Us",
   schedule: "Schedule",

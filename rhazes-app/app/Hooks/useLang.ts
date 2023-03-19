@@ -4,6 +4,6 @@ import ar from "../languages/ar";
 
 export default function useLang() {
   const pathname = usePathname();
-  const lang = pathname?.includes("en") ? en : ar;
+  const lang = pathname?.startsWith("/en/") ? en : ar;
   return lang;
 }

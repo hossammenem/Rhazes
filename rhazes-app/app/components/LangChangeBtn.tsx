@@ -5,11 +5,13 @@ import useLang from "../Hooks/useLang";
 export default function LangChangeBtn() {
   const router = useRouter();
   const lang = useLang();
-  const [checked, setChcked] = useState(lang.lang == "ar" ? true : false);
+  const [checked, setChcked] = useState(lang.lang === "ar");
 
   function handleLanguageChange() {
-    setChcked(!checked);
-    router.push(`/${checked ? "ar" : "en"}/`);
+    if (lang) {
+      setChcked(!checked);
+      router.push(`/${lang.lang === "en" ? "ar" : "en"}/`);
+    }
   }
 
   return (

@@ -1,6 +1,6 @@
 export default {
   // navbar
-  lang: "Ar",
+  lang: "ar",
   home: "الصفحة الرئيسية",
   aboutUs: "عنّا",
   schedule: "المواعيد",
