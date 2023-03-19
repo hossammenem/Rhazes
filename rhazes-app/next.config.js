@@ -9,14 +9,6 @@ const nextConfig = {
     localeDetection: false,
   },
   trailingSlash: true,
-  async rewrites() {
-    return [
-      {
-        source: "/:lang(en|ar)/:path*",
-        destination: "/:path*",
-      },
-    ];
-  },
 };
 
 module.exports = nextConfig;
