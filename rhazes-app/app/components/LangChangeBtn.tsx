@@ -1,4 +1,4 @@
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import useLang from "../Hooks/useLang";
 
@@ -9,8 +9,7 @@ export default function LangChangeBtn() {
 
   function handleLanguageChange() {
     setChcked(!checked);
-    const path = lang.lang === "en" ? "ar" : "en";
-    router.push(`/${path}`, `/${path}`, { locale: false });
+    router.push(`/${lang.lang === "en" ? "ar" : "en"}`);
   }
 
   return (
