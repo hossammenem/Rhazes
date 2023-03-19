@@ -11,11 +11,12 @@ const nextConfig = {
   async rewrites() {
     return [
       {
-        source: "/:lang(en)/:path*",
-        destination: "/:path*",
+        source: "/en",
+        destination: `/${defaultLocale}`,
+        permanent: true,
       },
       {
-        source: "/:lang(ar)/:path*",
+        source: "/:lang(ar|en)/:path*",
         destination: "/:path*",
       },
     ];
