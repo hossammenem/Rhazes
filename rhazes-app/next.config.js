@@ -12,7 +12,7 @@ const nextConfig = {
     return [
       {
         source: "/en",
-        destination: `/${defaultLocale}`,
+        destination: `/`,
         permanent: true,
       },
       {
