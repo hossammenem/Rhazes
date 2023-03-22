@@ -41,6 +41,7 @@ export default function Schedule() {
   const { data, loading, error } = useQuery(latestMatches);
 
   if (error)
+    console.log(error);
     return (
       <>
         <h1
