@@ -40,7 +40,7 @@ export default function Schedule() {
   const lang = useLang();
   const { data, loading, error } = useQuery(latestMatches);
 
-  if (error)
+  if (error) {
     console.log(error);
     return (
       <>
@@ -55,6 +55,7 @@ export default function Schedule() {
         </div>
       </>
     );
+  }
   if (loading) {
     return (
       <>
