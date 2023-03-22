@@ -4,3 +4,4 @@
 - ~~Add href to the logo left top corner~~
 - ~~Back to home link at "Coming Soon" Pages~~
 - ~~solve the bug for main bg repeating when zooming out~~
+- transition between Ar & En
