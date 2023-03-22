@@ -5,3 +5,4 @@
 - ~~Back to home link at "Coming Soon" Pages~~
 - ~~solve the bug for main bg repeating when zooming out~~
 - transition between Ar & En
+- Adding opp team logo at admin dashboard
