@@ -28,7 +28,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   await startServer;
 
   await apolloServer.createHandler({
-    path: "/api/graphql",
+    path: "/api/graphql/",
   })(req, res);
 };
 
