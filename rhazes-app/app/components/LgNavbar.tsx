@@ -9,7 +9,7 @@ export default function LgNavbar() {
       <div className="relative hidden lg:block">
         <a href="/">
           <Image
-            width={200}
+            width={185}
             height={130}
             className="position-img"
             layout="fixed"
@@ -21,7 +21,7 @@ export default function LgNavbar() {
       <div className="relative hidden h-full w-full lg:block">
         <ul
           className={`flex h-full w-11/12 ${
-            lang.lang == "En" ? "flex-row " : "flex-row-reverse"
+            lang.lang == "en" ? "flex-row " : "flex-row-reverse"
           } items-center justify-center gap-7`}
         >
           <NavItem sectionId="/">{lang.home}</NavItem>

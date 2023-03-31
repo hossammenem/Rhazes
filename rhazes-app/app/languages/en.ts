@@ -9,7 +9,7 @@ export default {
   lore: "Lore",
 
   // hero
-  CTA: "CTA goes here",
+  CTA: "Official page for Rhazes Esports Organization",
   contactUs: "Contact Us",
   joinUs: "Join Us",
 
