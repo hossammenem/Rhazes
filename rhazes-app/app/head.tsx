@@ -3,8 +3,8 @@ import { usePathname } from "next/navigation";
 
 export default function Head() {
   const pathname = usePathname();
-  const title = pathname?.includes("En") ? "Home" : "الصفحة الرئيسية";
-  const description = pathname?.includes("En")
+  const title = pathname?.includes("en") ? "Home" : "الصفحة الرئيسية";
+  const description = pathname?.includes("en")
     ? "Home Page of Rahzes Esport's organization"
     : "الصفحة الرئيسية لمنظمة الرازي للرياضة الالكترونية";
 

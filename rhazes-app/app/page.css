@@ -260,9 +260,6 @@ input[type="number"] {
     0% 0.5em
   );
   color: #fff;
-}
-
-.cut-corners {
   border: none;
   padding-inline: 10px;
 }

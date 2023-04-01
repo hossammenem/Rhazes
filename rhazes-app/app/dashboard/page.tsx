@@ -3,10 +3,21 @@ import "../page.css";
 import Form from "./components/Form";
 import Preview from "./components/Preview";
 import Link from "next/link";
-import { FaArrowLeft, FaUserAlt } from "react-icons/fa";
+import { FaArrowLeft, FaCoins, FaUserAlt } from "react-icons/fa";
 import { FiLogOut } from "react-icons/fi";
+import { SessionProvider, useSession, signOut } from "next-auth/react";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 export default function AdminDashboard() {
+  const { data: session, status } = useSession();
+  const name = session?.user?.name;
+  const router = useRouter();
+
+  if (status === "unauthenticated") {
+    router.push("/");
+  }
+
   return (
     <>
       <div className="fixed -z-10 h-screen w-screen before:absolute before:inset-0 before:h-full before:w-full before:bg-bg2 before:bg-cover before:bg-no-repeat before:opacity-[0.35] before:content-['']"></div>
@@ -21,10 +32,12 @@ export default function AdminDashboard() {
         </h1>
 
         <div className="flex flex-row items-center gap-2">
-          <p>admin</p>
+          <p>{name}</p>
           <FaUserAlt />
         </div>
-        <FiLogOut className="ml-4" />
+        <button onClick={() => signOut()}>
+          <FiLogOut className="ml-4" />
+        </button>
       </header>
 
       <section className="mt-16">
