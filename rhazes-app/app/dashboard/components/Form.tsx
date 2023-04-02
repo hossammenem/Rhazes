@@ -2,6 +2,7 @@
 import { gql, useMutation } from "@apollo/client";
 import { useAtom } from "jotai";
 import { matchAtom, initMatch } from "../store";
+import { matchType } from "@/app/components/Schedule";
 
 interface IFormProps {
   name: string;
@@ -19,7 +20,7 @@ const createMatchMutation = gql`
     $matchResults: String
     $date: String
   ) {
-    createMatch(
+    createMatchMutation(
       OppLogo: $oppLogo
       OppName: $oppName
       tournament: $tournament
@@ -41,16 +42,19 @@ const createMatchMutation = gql`
 export default function Form() {
   const [state, setState] = useAtom(matchAtom);
   const MatchRes = "".concat(state.ourRes, ":", state.OppRes);
-  const [createMatch] = useMutation(createMatchMutation, {
-    variables: {
-      oppLogo: state.OppName,
-      oppName: state.OppName,
-      tournament: state.tournament,
-      matchType: state.matchType,
-      matchResults: MatchRes,
-      date: new Date(state.date),
-    },
-  });
+  const [createMatch, { data, loading, error }] = useMutation(
+    createMatchMutation,
+    {
+      variables: {
+        oppLogo: state.OppName,
+        oppName: state.OppName,
+        tournament: state.tournament,
+        matchType: state.matchType as matchType,
+        matchResults: MatchRes,
+        date: new Date(state.date),
+      },
+    }
+  );
 
   const handleOnChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
@@ -62,13 +66,27 @@ export default function Form() {
   const handleOnSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      console.log(state)
+      console.log(state);
       createMatch();
     } catch (error) {
       console.log(error);
     }
     setState(initMatch);
   };
+
+  if (loading) {
+    console.log("Loading...");
+  }
+
+  if (error) {
+    console.log(error);
+    console.log(error.cause);
+    console.log(error.extraInfo);
+  }
+
+  if (data) {
+    console.log(data);
+  }
 
   return (
     <form
@@ -113,7 +131,7 @@ export default function Form() {
           <input
             type="datetime-local"
             className="cut-corners text-lg"
-            style={{padding: "16px"}}
+            style={{ padding: "16px" }}
             value={state.date}
             onChange={handleOnChange}
             name="date"
