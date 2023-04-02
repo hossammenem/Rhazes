@@ -21,6 +21,6 @@
 
 ## Admin Dashboard
 - Adding opp team logo at admin dashboard
-- add authentication to the dashboard
+- ~~add authentication to the dashboard~~
 - add an alert after the admin submits a new match ( error, success )
 - ~~createMatchMutation not working~~
