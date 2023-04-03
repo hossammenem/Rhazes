@@ -8,6 +8,7 @@ import { FiLogOut } from "react-icons/fi";
 import { SessionProvider, useSession, signOut } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
+import LoadingSpinner from "../components/LoadingSpinner";
 
 export default function AdminDashboard() {
   const { data: session, status } = useSession();
@@ -16,6 +17,14 @@ export default function AdminDashboard() {
 
   if (status === "unauthenticated") {
     router.push("/");
+  }
+
+  if (status === "loading") {
+    return (
+      <div className="flex h-screen w-screen items-center justify-center">
+        <LoadingSpinner />
+      </div>
+    );
   }
 
   return (
